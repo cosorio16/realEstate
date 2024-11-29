@@ -12,6 +12,7 @@ import Up from "../Icons/Up.astro";
 import Employee from "../Icons/Employee.astro";
 import Transaction from "../Icons/Transaction.astro";
 import Verified from "../Icons/Verified.astro";
+import Process from "../Icons/Process.astro";
 ---
 
 <Layout title="Constructora Nacional - Inicio">
@@ -37,11 +38,11 @@ import Verified from "../Icons/Verified.astro";
         </p>
         <div class="gap-3 flex flex-wrap" data-aos="zoom-in" data-aos="zoom-in">
           <button
-            class="border-transparent border-2 px-6 py-2 font-medium rounded-full text-lg text-white bg-emerald-500 active:scale-95 transition-all hover:backdrop-blur hover:text-white hover:border-emerald-500 hover:bg-transparent"
+            class="border-transparent border-2 px-6 py-2 font-medium rounded-full text-lg text-white bg-emerald-600 active:scale-95 transition-all hover:backdrop-blur hover:text-white hover:border-emerald-600 hover:bg-transparent"
             >Ver Propiedades</button
           >
           <button
-            class="border-transparent border-2 px-6 py-2 font-medium rounded-full text-lg text-white bg-emerald-600 active:scale-95 transition-all hover:backdrop-blur hover:text-white hover:border-emerald-500 hover:bg-transparent"
+            class="border-transparent border-2 px-6 py-2 font-medium rounded-full text-lg text-white bg-emerald-600 active:scale-95 transition-all hover:backdrop-blur hover:text-white hover:border-emerald-600 hover:bg-transparent"
             >Solicita Asesoria</button
           >
         </div>
@@ -49,7 +50,7 @@ import Verified from "../Icons/Verified.astro";
     </hero>
     <section class="py-10 border-b bg-slate-100">
       <div class="p-4 flex flex-col gap-4 items-center" data-aos="fade-up">
-        <h1 class="text-2xl text-center font-semibold">
+        <h1 class="text-xl text-center font-semibold">
           Tu Confianza, Nuestra Prioridad.
         </h1>
         <p class="text-sm p-5">
@@ -61,7 +62,7 @@ import Verified from "../Icons/Verified.astro";
           aquí para ayudarte a encontrar la mejor opción para ti.
         </p>
         <button
-          class="border px-4 py-2 bg-emerald-400 text-white font-medium rounded-full flex gap-4 items-center active:scale-90 transition-all hover:gap-10"
+          class="border px-4 py-2 bg-emerald-600 text-white font-medium rounded-full flex gap-4 items-center active:scale-90 transition-all hover:gap-10"
         >
           Encuentra Tu Propiedad Hoy
           <Arrow sizes="20" />
@@ -71,7 +72,7 @@ import Verified from "../Icons/Verified.astro";
     <section class="p-10 flex items-center flex-col gap-4 border-b">
       <div class="flex flex-col gap-8" data-aos="zoom-out">
         <div class="flex flex-col gap-1">
-          <h1 class="w-full text-2xl font-medium flex items-center gap-2">
+          <h1 class="w-full text-xl font-medium flex items-center gap-2">
             <Light sizes="20" /> ¿Por Qué Elegirnos?
           </h1>
           <h2 class="text-lg">
@@ -86,11 +87,11 @@ import Verified from "../Icons/Verified.astro";
         </div>
         <div class="flex flex-col gap-2">
           <h1
-            class="text-start w-full text-2xl font-medium flex items-center gap-2 justify-between"
+            class="text-start w-full text-xl font-medium flex items-center gap-2 justify-between"
             data-aos="zoom-out-up"
           >
             Beneficios destacados <span
-              class="p-2 border text-white rounded-full bg-emerald-500"
+              class="p-2 border text-white rounded-full bg-emerald-600"
             >
               <svg width="23" height="23" viewBox="0 0 24 24"
                 ><path
@@ -99,38 +100,36 @@ import Verified from "../Icons/Verified.astro";
               >
             </span>
           </h1>
-          <div class="border-b py-3 shadow-sm" data-aos="fade-left">
-            <h2 class="text-lg text-emerald-500 flex items-center gap-2">
+          <div class="border-y py-3 shadow-sm" data-aos="fade-left">
+            <h2 class="text-lg text-emerald-600 flex items-center gap-2">
               <Up sizes="20" /> Variedad de Propiedades
             </h2>
-            <p class="text-sm">
+            <p>
               Desde apartamentos modernos hasta casas familiares, tenemos
               opciones para todos.
             </p>
           </div>
-          <div class="border-b py-3 shadow-sm" data-aos="fade-right">
-            <h2 class="text-lg text-emerald-500 flex items-center gap-2">
+          <div class="border-y py-3 shadow-sm" data-aos="fade-right">
+            <h2 class="text-lg text-emerald-600 flex items-center gap-2">
               <Employee sizes="20" />
               Asesoría Personalizada
             </h2>
-            <p class="text-sm">
+            <p>
               Te ayudamos a tomar decisiones informadas con un servicio 100%
               personalizado.
             </p>
           </div>
-          <div class="border-b py-3 shadow-sm" data-aos="fade-left">
-            <h2 class="text-lg text-emerald-500 flex items-center gap-2">
+          <div class="border-y py-3 shadow-sm" data-aos="fade-left">
+            <h2 class="text-lg text-emerald-600 flex items-center gap-2">
               <Transaction sizes="20" /> Transacciones Seguras
             </h2>
-            <p class="text-sm">
-              Garantizamos procesos legales transparentes y seguros.
-            </p>
+            <p>Garantizamos procesos legales transparentes y seguros.</p>
           </div>
-          <div class="border-b py-3 shadow-sm" data-aos="fade-right">
-            <h2 class="text-lg text-emerald-500 flex items-center gap-2">
+          <div class="border-y py-3 shadow-sm" data-aos="fade-right">
+            <h2 class="text-lg text-emerald-600 flex items-center gap-2">
               <Award sizes="20" /> Precios Competitivos
             </h2>
-            <p class="text-sm">
+            <p>
               Accede a propiedades de calidad a precios competitivos en el
               mercado.
             </p>
@@ -140,9 +139,9 @@ import Verified from "../Icons/Verified.astro";
     </section>
     <section class="p-10 bg-slate-100 flex flex-col gap-4">
       <div class="flex flex-col gap-1">
-        <h1 class="text-2xl font-medium flex items-center gap-2">
-          Nuestras Propiedades Más Populares <span class="text-emerald-500"
-            ><Verified sizes="25" /></span
+        <h1 class="text-xl font-medium flex items-center gap-4 border-b py-4">
+          Nuestras Propiedades Más Populares <span class="text-emerald-600"
+            ><Verified sizes="28" /></span
           >
         </h1>
         <h2 class="text-lg
@@ -156,21 +155,23 @@ import Verified from "../Icons/Verified.astro";
         todas tus necesidades.
       </p>
       <div
-        class="flex gap-4 overflow-x-scroll scroll-smooth scrollAparment py-10"
+        class="flex gap-4 overflow-x-scroll scroll-smooth scrollAparment py-6"
       >
         <Aparment />
         <Aparment />
         <Aparment />
         <Aparment />
       </div>
-      <button class="border px-4 py-2 rounded-full bg-emerald-500 text-white">
+      <button class="border px-4 py-2 rounded-full bg-emerald-600 text-white">
         Ver Todas las Propiedades
       </button>
     </section>
     <section class="p-10 flex flex-col gap-5 border-b">
       <div class="flex flex-col gap-1">
-        <h1 class="font-semibold text-xl">Testimonios de Nuestros Clientes</h1>
-        <h2 class="text-gray-500">
+        <h1 data-aos="zoom-out-up" class="font-semibold text-xl">
+          Testimonios de Nuestros Clientes
+        </h1>
+        <h2 data-aos="zoom-out-up" class="text-gray-600">
           Escucha lo que dicen nuestros clientes sobre su experiencia con
           nosotros.
         </h2>
@@ -181,9 +182,9 @@ import Verified from "../Icons/Verified.astro";
         <Testimonies />
       </div>
     </section>
-    <section class="p-10 bg-slate-100">
+    <section class="p-10 bg-slate-100 flex flex-col gap-4">
       <div class="flex flex-col gap-1">
-        <h1 class="text-2xl font-semibold">Así Es Como Trabajamos</h1>
+        <h1 class="text-xl font-semibold">Así Es Como Trabajamos</h1>
         <p class="text-sm">
           Nuestro proceso es fácil y directo, para que no pierdas tiempo ni
           energía. A continuación, te explicamos cómo podemos ayudarte a
@@ -191,18 +192,54 @@ import Verified from "../Icons/Verified.astro";
         </p>
       </div>
 
-      <!-- <p>
-    Título: "" Texto: "" Pasos (con íconos y descripciones cortas):
-    "Consulta Inicial": "Nos reunimos contigo para conocer tus necesidades y
-    presupuesto." "Selección de Propiedades": "Te mostramos las mejores
-    opciones disponibles según tus preferencias." "Visita y Decisión": "Te
-    ayudamos a agendar visitas a las propiedades que te interesan." "Cierre
-    y Trámites": "Te acompañamos durante el proceso de compra, venta o
-    alquiler."
-  </p> -->
+      <div class="flex flex-col gap-4">
+        <div
+          class="flex flex-col gap-1 border-y py-2 bg-emerald-600 text-white px-4 rounded-lg"
+        >
+          <h1 class="flex items-center gap-2 text-lg font-medium">
+            <Process sizes="20" /> Consulta Inicial
+          </h1>
+          <p>
+            Nos reunimos contigo para conocer tus necesidades y presupuesto.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-1 border-y py-2 bg-white p-4 shadow shadow-white rounded-lg"
+        >
+          <h1
+            class="flex items-center gap-2 text-lg font-medium text-emerald-600"
+          >
+            <Process sizes="20" />Selección de Propiedades
+          </h1>
+          <p>
+            Te mostramos las mejores opciones disponibles según tus
+            preferencias.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-1 border-y py-2 bg-emerald-600 text-white p-4 shadow shadow-white rounded-lg"
+        >
+          <h1 class="flex items-center gap-2 text-lg font-medium">
+            <Process sizes="20" />Cierre y Trámites
+          </h1>
+          <p>Te acompañamos durante el proceso de compra, venta o alquiler.</p>
+        </div>
+        <div
+          class="flex flex-col gap-1 border-y py-2 bg-white p-4 shadow shadow-white rounded-lg"
+        >
+          <h1
+            class="flex items-center gap-2 text-lg font-medium text-emerald-600"
+          >
+            <Process sizes="20" />Visita y Decisión
+          </h1>
+          <p>
+            Te ayudamos a agendar visitas a las propiedades que te interesan.
+          </p>
+        </div>
+      </div>
     </section>
     <section class="p-10 flex flex-col gap-2 border-b">
-      <h1 class="text-2xl font-semibold">No trabajes con nosotros si...</h1>
+      <h1 class="text-xl font-semibold">No trabajes con nosotros si...</h1>
       <h2>
         Si buscas un proceso rápido y sin asesoramiento profesional, no somos la
         opción adecuada para ti.
@@ -227,7 +264,11 @@ import Verified from "../Icons/Verified.astro";
         que estés comprando, vendiendo o alquilando, nuestro equipo está listo
         para brindarte la mejor asesoría."
       </p>
-      <button> Solicita tu Consulta Gratuita </button>
+      <button
+        class="border px-4 py-2 bg-emerald-600 rounded text-white font-medium hover:bg-white hover:text-emerald-600 hover:border-emerald-600 transition-all"
+      >
+        Solicita tu Consulta Gratuita
+      </button>
     </section>
     <Footer />
   </main>
@@ -241,7 +282,8 @@ import Verified from "../Icons/Verified.astro";
   <script>
     import AOS from "aos";
     AOS.init({
-      once: true,
+      once: false,
+      offset: 200,
     });
   </script>
 </Layout>
