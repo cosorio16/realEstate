@@ -1,6 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Aparment from "../components/Aparment.astro";
+import Arrow from "../Icons/Arrow.astro";
+import Testimonies from "../components/Testimonies.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -8,7 +12,7 @@ import Header from "../components/Header.astro";
   <main class="flex flex-col">
     <hero class="relative">
       <img
-        src="/hero.webp"
+        src="/houses/house15.webp"
         alt=""
         class="aspect-auto object-cover h-screen w-screen"
       />
@@ -26,17 +30,17 @@ import Header from "../components/Header.astro";
         </p>
         <div class="gap-3 flex flex-wrap">
           <button
-            class="px-4 py-2 font-medium rounded-full text-lg text-white bg-orange-500 active:scale-95 transition-all"
+            class="border-transparent border-2 px-6 py-2 font-medium rounded-full text-lg text-white bg-emerald-500 active:scale-95 transition-all hover:backdrop-blur hover:text-white hover:border-emerald-500 hover:bg-transparent"
             >Ver Propiedades</button
           >
           <button
-            class="px-4 py-2 font-medium rounded-full text-lg text-white bg-orange-400 active:scale-95 transition-all"
+            class="border-transparent border-2 px-6 py-2 font-medium rounded-full text-lg text-white bg-emerald-600 active:scale-95 transition-all hover:backdrop-blur hover:text-white hover:border-emerald-500 hover:bg-transparent"
             >Solicita Asesoria</button
           >
         </div>
       </div>
     </hero>
-    <section class="py-10 border-b">
+    <section class="py-10 border-b bg-slate-100">
       <div class="p-4 flex flex-col gap-4 items-center">
         <h1 class="text-2xl text-center font-semibold">
           Tu Confianza, Nuestra Prioridad.
@@ -50,9 +54,10 @@ import Header from "../components/Header.astro";
           aquí para ayudarte a encontrar la mejor opción para ti.
         </p>
         <button
-          class="border px-4 py-2 bg-orange-400 text-white font-medium rounded-full w-fit"
+          class="border px-4 py-2 bg-emerald-400 text-white font-medium rounded-full w-fit flex gap-4 items-center hover:bg-white hover:text-emerald-500 hover:border-emerald-500 transition-all hover:gap-10"
         >
           Encuentra Tu Propiedad Hoy
+          <Arrow sizes="20" />
         </button>
       </div>
     </section>
@@ -76,27 +81,27 @@ import Header from "../components/Header.astro";
           Beneficios destacados
         </h1>
         <div class="border-b py-3 shadow-sm">
-          <h2 class="text-lg text-orange-500">Variedad de Propiedades</h2>
+          <h2 class="text-lg text-emerald-500">Variedad de Propiedades</h2>
           <p class="text-sm">
             Desde apartamentos modernos hasta casas familiares, tenemos opciones
             para todos.
           </p>
         </div>
         <div class="border-b py-3 shadow-sm">
-          <h2 class="text-lg text-orange-500">Asesoría Personalizada:</h2>
+          <h2 class="text-lg text-emerald-500">Asesoría Personalizada:</h2>
           <p class="text-sm">
             Te ayudamos a tomar decisiones informadas con un servicio 100%
             personalizado.
           </p>
         </div>
         <div class="border-b py-3 shadow-sm">
-          <h2 class="text-lg text-orange-500">Transacciones Seguras:</h2>
+          <h2 class="text-lg text-emerald-500">Transacciones Seguras:</h2>
           <p class="text-sm">
             Garantizamos procesos legales transparentes y seguros.
           </p>
         </div>
         <div class="border-b py-3 shadow-sm">
-          <h2 class="text-lg text-orange-500">Precios Competitivos:</h2>
+          <h2 class="text-lg text-emerald-500">Precios Competitivos:</h2>
           <p class="text-sm">
             Accede a propiedades de calidad a precios competitivos en el
             mercado.
@@ -104,75 +109,86 @@ import Header from "../components/Header.astro";
         </div>
       </div>
     </section>
-    <section class="p-10">
-      <h1>Nuestras Propiedades Más Populares</h1>
-      <h2>Explora algunas de las mejores opciones que tenemos para ti.</h2>
-      <p>
+    <section class="p-10 bg-slate-100 flex flex-col gap-4 h-screen">
+      <div class="flex flex-col gap-1">
+        <h1 class="text-2xl font-medium">Nuestras Propiedades Más Populares</h1>
+        <h2 class="text-lg font-medium">
+          Explora algunas de las mejores opciones que tenemos para ti.
+        </h2>
+      </div>
+      <p class="text-sm">
         Desde apartamentos en el centro de la ciudad hasta casas en barrios
         tranquilos, tenemos una amplia variedad de propiedades para satisfacer
-        todas tus necesidades." Galería de Propiedades
+        todas tus necesidades.
       </p>
-      <p>
-        "Apartamento en [Ubicación]": "2 recámaras, 2 baños, piscina. $120,000"
-      </p>
-      <p>
-        "Casa Familiar en [Ubicación]": "4 recámaras, 3 baños, jardín amplio.
-        $250,000"
-      </p>
-      <p>
-        "Oficina Comercial en [Ubicación]": "Espacio moderno con excelente
-        ubicación. $80,000"
-      </p>
-      <button>Ver Todas las Propiedades</button>
+      <div
+        class="flex gap-4 overflow-x-scroll scroll-smooth scrollAparment py-10"
+      >
+        <Aparment />
+        <Aparment />
+        <Aparment />
+        <Aparment />
+      </div>
+      <button class="border px-4 py-2 rounded-full bg-emerald-500 text-white">
+        Ver Todas las Propiedades
+      </button>
     </section>
-    <section class="p-10">
-      <h1>Testimonios de Nuestros Clientes</h1>
-      <h2>
-        Escucha lo que dicen nuestros clientes sobre su experiencia con
-        nosotros.
-      </h2>
+    <section class="p-10 flex flex-col gap-5 border-b">
+      <div class="flex flex-col gap-1">
+        <h1 class="font-semibold text-xl">
+          Testimonios de Nuestros Clientes
+        </h1>
+        <h2 class="text-gray-500">
+          Escucha lo que dicen nuestros clientes sobre su experiencia con
+          nosotros.
+        </h2>
+      </div>
+      <div class="flex flex-col gap-4">
+        <Testimonies />
+        <Testimonies />
+        <Testimonies />
+      </div>
+    </section>
+    <section class="p-10 bg-slate-100">
+      <div class="flex flex-col gap-1">
+        <h1 class="text-2xl font-semibold">Así Es Como Trabajamos</h1>
+        <p class="text-sm">
+          Nuestro proceso es fácil y directo, para que no pierdas tiempo ni
+          energía. A continuación, te explicamos cómo podemos ayudarte a
+          encontrar la propiedad ideal o vender la que ya tienes.
+        </p>
+      </div>
+
       <!-- <p>
-        Testimonios (con imágenes de clientes, si es posible): "Gracias a
-        [Nombre de la inmobiliaria], encontré la casa perfecta para mi familia.
-        Todo fue sencillo y el proceso fue transparente." - Laura Pérez,
-        compradora feliz. "Vender mi apartamento nunca fue tan fácil. La
-        asesoría que me brindaron fue excelente y obtuve un buen precio." -
-        Carlos Martínez, vendedor satisfecho.
-      </p> -->
+      Título: "" Texto: "" Pasos (con íconos y descripciones cortas):
+      "Consulta Inicial": "Nos reunimos contigo para conocer tus necesidades y
+      presupuesto." "Selección de Propiedades": "Te mostramos las mejores
+      opciones disponibles según tus preferencias." "Visita y Decisión": "Te
+      ayudamos a agendar visitas a las propiedades que te interesan." "Cierre
+      y Trámites": "Te acompañamos durante el proceso de compra, venta o
+      alquiler."
+    </p> -->
     </section>
-    <section class="p-10">
-      <h1>Así Es Como Trabajamos</h1>
-      <p>
-        Nuestro proceso es fácil y directo, para que no pierdas tiempo ni
-        energía. A continuación, te explicamos cómo podemos ayudarte a encontrar
-        la propiedad ideal o vender la que ya tienes.
-      </p>
-      <!-- <p>
-        Título: "" Texto: "" Pasos (con íconos y descripciones cortas):
-        "Consulta Inicial": "Nos reunimos contigo para conocer tus necesidades y
-        presupuesto." "Selección de Propiedades": "Te mostramos las mejores
-        opciones disponibles según tus preferencias." "Visita y Decisión": "Te
-        ayudamos a agendar visitas a las propiedades que te interesan." "Cierre
-        y Trámites": "Te acompañamos durante el proceso de compra, venta o
-        alquiler."
-      </p> -->
-    </section>
-    <section class="p-10">
-      <h1>No trabajes con nosotros si...</h1>
+    <section class="p-10 flex flex-col gap-2 border-b">
+      <h1 class="text-2xl font-semibold">No trabajes con nosotros si...</h1>
       <h2>
-        "Si buscas un proceso rápido y sin asesoramiento profesional, no somos
-        la opción adecuada para ti. Nuestro enfoque está en ofrecerte una
-        experiencia segura, personalizada y bien gestionada."
+        Si buscas un proceso rápido y sin asesoramiento profesional, no somos la
+        opción adecuada para ti.
       </h2>
+      <h3>
+        Nuestro enfoque está en ofrecerte una experiencia segura, personalizada
+        y bien gestionada.
+      </h3>
       <p>
         Si te importa tomar decisiones bien informadas y estás dispuesto a
         invertir en encontrar la mejor opción, ¡estamos aquí para ayudarte!
       </p>
     </section>
-    <section class="p-10" >
+    <section class="p-10 bg-slate-100">
       <h1>Tu Propiedad Ideal Está a Solo un Paso</h1>
       <h2>
-        Contáctanos hoy mismo y haz que tu sueño inmobiliario se haga realidad.
+        C class="text-lg font-medium"ontáctanos hoy mismo y haz que tu sueño
+        inmobiliario se haga realidad.
       </h2>
       <p>
         "Estamos aquí para ayudarte a encontrar la propiedad perfecta. Ya sea
@@ -181,13 +197,12 @@ import Header from "../components/Header.astro";
       </p>
       <button> Solicita tu Consulta Gratuita </button>
     </section>
-    <!-- <footer>
-      Texto Final: "Haz que tu próxima inversión inmobiliaria sea un éxito con
-      [Nombre de tu Inmobiliaria]. Contáctanos hoy y empieza a hacer realidad
-      tus planes." Links a redes sociales y contacto: "Síguenos en nuestras
-      redes sociales" "Contáctanos: [correo electrónico]" Información Legal: "©
-      2024 [Nombre de tu inmobiliaria]. Todos los derechos reservados."
-      "Política de privacidad" | "Términos y condiciones"
-    </footer> -->
+    <Footer />
   </main>
 </Layout>
+
+<style>
+  .scrollAparment {
+    scroll-snap-type: x mandatory;
+  }
+</style>
