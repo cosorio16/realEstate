@@ -4,10 +4,12 @@ import Arrow from "../Icons/Arrow.astro";
 const { price, location, info, image } = Astro.props;
 ---
 
-<div class="border rounded-lg min-w-80 pb-4 shadow-sm flex flex-col bg-white snap-center hover:scale-105 transition-all">
+<div
+  class="border rounded-lg min-w-80 pb-4 shadow-sm flex flex-col bg-white snap-center transition-all"
+>
   <img src="/houses/house1.jpg" alt="" class="rounded-t-lg" />
   <div class="p-4">
-    <span class="flex gap-1 items-center px-4 text-lg"
+    <span class="flex gap-1 items-center px-4 text-lg text-gray-600"
       ><svg width="20" height="20" viewBox="0 0 1024 1024"
         ><path
           fill="currentColor"
@@ -17,7 +19,7 @@ const { price, location, info, image } = Astro.props;
           d="M512 512a96 96 0 1 0 0-192a96 96 0 0 0 0 192m0 64a160 160 0 1 1 0-320a160 160 0 0 1 0 320"
         ></path></svg
       >
-      Location
+      Barranquilla
     </span>
     <div class="p-5 text-sm grid grid-cols-2 gap-2 text-gray-500 border-y my-2">
       <span class="flex items-center gap-2">

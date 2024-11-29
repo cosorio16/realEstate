@@ -5,9 +5,16 @@ import Footer from "../components/Footer.astro";
 import Aparment from "../components/Aparment.astro";
 import Arrow from "../Icons/Arrow.astro";
 import Testimonies from "../components/Testimonies.astro";
+import "aos/dist/aos.css";
+import Light from "../Icons/Light.astro";
+import Award from "../Icons/Award.astro";
+import Up from "../Icons/Up.astro";
+import Employee from "../Icons/Employee.astro";
+import Transaction from "../Icons/Transaction.astro";
+import Verified from "../Icons/Verified.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Constructora Nacional - Inicio">
   <Header />
   <main class="flex flex-col">
     <hero class="relative">
@@ -16,19 +23,19 @@ import Testimonies from "../components/Testimonies.astro";
         alt=""
         class="aspect-auto object-cover h-screen w-screen"
       />
-      <div class="h-screen w-screen bg-black absolute top-0 bg-opacity-60">
+      <div class="h-screen w-screen bg-black absolute top-0 bg-opacity-40">
       </div>
       <div
         class="absolute z-50 top-[calc(50%-150px)] px-8 text-white flex flex-col gap-4"
       >
-        <h1 class="text-4xl font-bold uppercase">
+        <h1 class="text-5xl font-bold uppercase hero" data-aos="fade-up">
           Encuentra la Propiedad de tus Sueños con nosotros
         </h1>
-        <p class="text-lg font-medium">
+        <p class="text-lg font-medium" data-aos="fade-up">
           Compra, vende o alquila con nosotros de manera fácil y segura. Tu
           hogar ideal te espera.
         </p>
-        <div class="gap-3 flex flex-wrap">
+        <div class="gap-3 flex flex-wrap" data-aos="zoom-in" data-aos="zoom-in">
           <button
             class="border-transparent border-2 px-6 py-2 font-medium rounded-full text-lg text-white bg-emerald-500 active:scale-95 transition-all hover:backdrop-blur hover:text-white hover:border-emerald-500 hover:bg-transparent"
             >Ver Propiedades</button
@@ -41,7 +48,7 @@ import Testimonies from "../components/Testimonies.astro";
       </div>
     </hero>
     <section class="py-10 border-b bg-slate-100">
-      <div class="p-4 flex flex-col gap-4 items-center">
+      <div class="p-4 flex flex-col gap-4 items-center" data-aos="fade-up">
         <h1 class="text-2xl text-center font-semibold">
           Tu Confianza, Nuestra Prioridad.
         </h1>
@@ -54,65 +61,92 @@ import Testimonies from "../components/Testimonies.astro";
           aquí para ayudarte a encontrar la mejor opción para ti.
         </p>
         <button
-          class="border px-4 py-2 bg-emerald-400 text-white font-medium rounded-full w-fit flex gap-4 items-center hover:bg-white hover:text-emerald-500 hover:border-emerald-500 transition-all hover:gap-10"
+          class="border px-4 py-2 bg-emerald-400 text-white font-medium rounded-full flex gap-4 items-center active:scale-90 transition-all hover:gap-10"
         >
           Encuentra Tu Propiedad Hoy
           <Arrow sizes="20" />
         </button>
       </div>
     </section>
-    <section class="py-10 px-10 flex items-center flex-col gap-4 border-b">
-      <div class="flex flex-col gap-1">
-        <h1 class="text-start w-full text-2xl font-medium">
-          ¿Por Qué Elegirnos?
-        </h1>
-        <h2 class="text-lg">
-          Lo que nos diferencia en el mercado inmobiliario.
-        </h2>
-      </div>
-      <p class="text-sm">
-        Nos enorgullece ofrecer un servicio excepcional que va más allá de la
-        simple compra o venta de propiedades. Trabajamos contigo en cada paso
-        del proceso para asegurarnos de que encuentres la opción perfecta según
-        tus necesidades.
-      </p>
-      <div class="flex flex-col gap-4">
-        <h1 class="text-start w-full text-2xl font-medium">
-          Beneficios destacados
-        </h1>
-        <div class="border-b py-3 shadow-sm">
-          <h2 class="text-lg text-emerald-500">Variedad de Propiedades</h2>
-          <p class="text-sm">
-            Desde apartamentos modernos hasta casas familiares, tenemos opciones
-            para todos.
+    <section class="p-10 flex items-center flex-col gap-4 border-b">
+      <div class="flex flex-col gap-8" data-aos="zoom-out">
+        <div class="flex flex-col gap-1">
+          <h1 class="w-full text-2xl font-medium flex items-center gap-2">
+            <Light sizes="20" /> ¿Por Qué Elegirnos?
+          </h1>
+          <h2 class="text-lg">
+            Lo que nos diferencia en el mercado inmobiliario.
+          </h2>
+          <p class="text-sm" data-aos="zoom-out">
+            Nos enorgullece ofrecer un servicio excepcional que va más allá de
+            la simple compra o venta de propiedades. Trabajamos contigo en cada
+            paso del proceso para asegurarnos de que encuentres la opción
+            perfecta según tus necesidades.
           </p>
         </div>
-        <div class="border-b py-3 shadow-sm">
-          <h2 class="text-lg text-emerald-500">Asesoría Personalizada:</h2>
-          <p class="text-sm">
-            Te ayudamos a tomar decisiones informadas con un servicio 100%
-            personalizado.
-          </p>
-        </div>
-        <div class="border-b py-3 shadow-sm">
-          <h2 class="text-lg text-emerald-500">Transacciones Seguras:</h2>
-          <p class="text-sm">
-            Garantizamos procesos legales transparentes y seguros.
-          </p>
-        </div>
-        <div class="border-b py-3 shadow-sm">
-          <h2 class="text-lg text-emerald-500">Precios Competitivos:</h2>
-          <p class="text-sm">
-            Accede a propiedades de calidad a precios competitivos en el
-            mercado.
-          </p>
+        <div class="flex flex-col gap-2">
+          <h1
+            class="text-start w-full text-2xl font-medium flex items-center gap-2 justify-between"
+            data-aos="zoom-out-up"
+          >
+            Beneficios destacados <span
+              class="p-2 border text-white rounded-full bg-emerald-500"
+            >
+              <svg width="23" height="23" viewBox="0 0 24 24"
+                ><path
+                  fill="currentColor"
+                  d="M19 6.41L17.59 5L7 15.59V9H5v10h10v-2H8.41z"></path></svg
+              >
+            </span>
+          </h1>
+          <div class="border-b py-3 shadow-sm" data-aos="fade-left">
+            <h2 class="text-lg text-emerald-500 flex items-center gap-2">
+              <Up sizes="20" /> Variedad de Propiedades
+            </h2>
+            <p class="text-sm">
+              Desde apartamentos modernos hasta casas familiares, tenemos
+              opciones para todos.
+            </p>
+          </div>
+          <div class="border-b py-3 shadow-sm" data-aos="fade-right">
+            <h2 class="text-lg text-emerald-500 flex items-center gap-2">
+              <Employee sizes="20" />
+              Asesoría Personalizada
+            </h2>
+            <p class="text-sm">
+              Te ayudamos a tomar decisiones informadas con un servicio 100%
+              personalizado.
+            </p>
+          </div>
+          <div class="border-b py-3 shadow-sm" data-aos="fade-left">
+            <h2 class="text-lg text-emerald-500 flex items-center gap-2">
+              <Transaction sizes="20" /> Transacciones Seguras
+            </h2>
+            <p class="text-sm">
+              Garantizamos procesos legales transparentes y seguros.
+            </p>
+          </div>
+          <div class="border-b py-3 shadow-sm" data-aos="fade-right">
+            <h2 class="text-lg text-emerald-500 flex items-center gap-2">
+              <Award sizes="20" /> Precios Competitivos
+            </h2>
+            <p class="text-sm">
+              Accede a propiedades de calidad a precios competitivos en el
+              mercado.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    <section class="p-10 bg-slate-100 flex flex-col gap-4 h-screen">
+    <section class="p-10 bg-slate-100 flex flex-col gap-4">
       <div class="flex flex-col gap-1">
-        <h1 class="text-2xl font-medium">Nuestras Propiedades Más Populares</h1>
-        <h2 class="text-lg font-medium">
+        <h1 class="text-2xl font-medium flex items-center gap-2">
+          Nuestras Propiedades Más Populares <span class="text-emerald-500"
+            ><Verified sizes="25" /></span
+          >
+        </h1>
+        <h2 class="text-lg
+              font-medium">
           Explora algunas de las mejores opciones que tenemos para ti.
         </h2>
       </div>
@@ -135,9 +169,7 @@ import Testimonies from "../components/Testimonies.astro";
     </section>
     <section class="p-10 flex flex-col gap-5 border-b">
       <div class="flex flex-col gap-1">
-        <h1 class="font-semibold text-xl">
-          Testimonios de Nuestros Clientes
-        </h1>
+        <h1 class="font-semibold text-xl">Testimonios de Nuestros Clientes</h1>
         <h2 class="text-gray-500">
           Escucha lo que dicen nuestros clientes sobre su experiencia con
           nosotros.
@@ -160,14 +192,14 @@ import Testimonies from "../components/Testimonies.astro";
       </div>
 
       <!-- <p>
-      Título: "" Texto: "" Pasos (con íconos y descripciones cortas):
-      "Consulta Inicial": "Nos reunimos contigo para conocer tus necesidades y
-      presupuesto." "Selección de Propiedades": "Te mostramos las mejores
-      opciones disponibles según tus preferencias." "Visita y Decisión": "Te
-      ayudamos a agendar visitas a las propiedades que te interesan." "Cierre
-      y Trámites": "Te acompañamos durante el proceso de compra, venta o
-      alquiler."
-    </p> -->
+    Título: "" Texto: "" Pasos (con íconos y descripciones cortas):
+    "Consulta Inicial": "Nos reunimos contigo para conocer tus necesidades y
+    presupuesto." "Selección de Propiedades": "Te mostramos las mejores
+    opciones disponibles según tus preferencias." "Visita y Decisión": "Te
+    ayudamos a agendar visitas a las propiedades que te interesan." "Cierre
+    y Trámites": "Te acompañamos durante el proceso de compra, venta o
+    alquiler."
+  </p> -->
     </section>
     <section class="p-10 flex flex-col gap-2 border-b">
       <h1 class="text-2xl font-semibold">No trabajes con nosotros si...</h1>
@@ -199,10 +231,17 @@ import Testimonies from "../components/Testimonies.astro";
     </section>
     <Footer />
   </main>
-</Layout>
 
-<style>
-  .scrollAparment {
-    scroll-snap-type: x mandatory;
-  }
-</style>
+  <style>
+    .scrollAparment {
+      scroll-snap-type: x mandatory;
+    }
+  </style>
+
+  <script>
+    import AOS from "aos";
+    AOS.init({
+      once: true,
+    });
+  </script>
+</Layout>
